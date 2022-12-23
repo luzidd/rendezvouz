@@ -1,0 +1,20 @@
+GET /events
+HTTP Header:
+User-Token: somesecret
+
+-> Response: json list with event id's
+===============================================
+GET /event/{id}
+HTTP Header:
+User-Token: somesecret
+
+-> Response: json with information about the specified event
+===============================================
+POST /login
+HTTP Body:
+{
+	"user": "user123",
+	"password-hash": "some hash"
+}
+
+Response: json with User-Token
