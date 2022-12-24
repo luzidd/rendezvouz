@@ -75,8 +75,12 @@ WSGI_APPLICATION = 'rendezvouz.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'test_db',
+        'USER': 'root',
+        'PASSWORD': '12345678',
+        'HOST': 'localhost',
+        'PORT': '8080',
     }
 }
 
@@ -105,7 +109,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'CET'
 
 USE_I18N = True
 
